@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humanoides en HRFEST 2026</title>
+<meta name="description" content="Tres videos cortos de las demostraciones de robots humanoides en HRFEST 2026, Universidad Nacional del Callao.">
+
+<meta property="og:url" content="https://stjimenezgo.github.io/hrfest2026/">
+<meta property="og:image" content="https://stjimenezgo.github.io/hrfest2026/vista-previa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Humanoides en HRFEST 2026">
+<meta property="og:description" content="Tres videos cortos de las demostraciones en la Universidad Nacional del Callao, 5 al 7 de noviembre de 2026.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light dark;
+    --fondo: #E2E2E2;
+    --texto: #00171F;
+    --suave: #3A4E57;
+    --titulo: #003459;
+    --marco: #00171F;
+    --foco: #003459;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #00171F;
+      --texto: #E2E2E2;
+      --suave: #9FB3BC;
+      --titulo: #ADEBFF;
+      --marco: #003459;
+      --foco: #ADEBFF;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+  }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: clamp(1.75rem, 5vw, 4rem) clamp(1.25rem, 4vw, 2.5rem) 3rem;
+  }
+  h1 {
+    margin: 0 0 0.75rem;
+    color: var(--titulo);
+    font-weight: 700;
+    font-size: clamp(2.25rem, 6.5vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    max-width: 14ch;
+  }
+  .lead {
+    margin: 0 0 2.25rem;
+    max-width: 62ch;
+    color: var(--suave);
+  }
+  .reel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1rem, 2.5vw, 1.75rem);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .reel figure { margin: 0; }
+  .reel video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    background: var(--marco);
+    border: 3px solid var(--marco);
+    border-radius: 22px;
+  }
+  .reel video:focus-visible {
+    outline: 3px solid var(--foco);
+    outline-offset: 3px;
+  }
+  figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--suave);
+    max-width: 34ch;
+  }
+  .pista { display: none; margin: -1.25rem 0 1rem; font-size: 0.95rem; color: var(--suave); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--marco);
+    max-width: 62ch;
+    font-size: 0.95rem;
+    color: var(--suave);
+  }
+  footer p { margin: 0 0 0.75rem; }
+  a { color: var(--titulo); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+
+  /* En el celular: tira horizontal que se desliza, con el siguiente video asomándose */
+  @media (max-width: 720px) {
+    .pista { display: block; }
+    .reel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      margin: 0 calc(-1 * clamp(1.25rem, 4vw, 2.5rem));
+      padding: 0 clamp(1.25rem, 4vw, 2.5rem) 0.5rem;
+      scrollbar-width: none;
+    }
+    .reel::-webkit-scrollbar { display: none; }
+    .reel li { flex: 0 0 78%; scroll-snap-align: center; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Humanoides en HRFEST 2026</h1>
+  <p class="lead">Tres videos cortos de las demostraciones de robots humanoides en la Universidad Nacional del Callao, durante la IEEE International Conference on Humanoid Robotics, Innovation &amp; Leadership, del 5 al 7 de noviembre de 2026.</p>
+  <p class="pista">Desliza a la izquierda para ver los tres.</p>
+
+  <ul class="reel">
+    <li>
+      <figure>
+        <video src="humanoide-1.mp4" poster="portada-1.jpg" controls playsinline preload="metadata"
+               aria-label="Video 1: rutina de movimientos de un humanoide"></video>
+        <figcaption>Un humanoide hace una rutina de movimientos frente a los stands de IEEE UNAC.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <video src="humanoide-2.mp4" poster="portada-2.jpg" controls playsinline preload="metadata"
+               aria-label="Video 2: equilibrio y movimiento de brazos"></video>
+        <figcaption>Otra secuencia del mismo humanoide: equilibrio y movimiento de brazos.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <video src="humanoide-3.mp4" poster="portada-3.jpg" controls playsinline preload="metadata"
+               aria-label="Video 3: humanoide caminando en el campus"></video>
+        <figcaption>Un humanoide más pequeño camina entre los asistentes en la plaza del campus.</figcaption>
+      </figure>
+    </li>
+  </ul>
+
+  <footer>
+    <p>En HRFEST presentamos el trabajo de FlexIA sobre ubicación y dimensionamiento de recursos energéticos distribuidos como servicio de control de tensión, usando aprendizaje por refuerzo (Soft Actor-Critic).</p>
+    <p><a href="https://hrfest.org/congress/2026/presentaciones">Programa de artículos de HRFEST 2026</a></p>
+  </footer>
+</main>
+<script>
+  // Solo un video suena a la vez
+  const videos = document.querySelectorAll(".reel video");
+  videos.forEach(v => v.addEventListener("play", () => {
+    videos.forEach(o => { if (o !== v) o.pause(); });
+  }));
+</script>
+</body>
+</html>
